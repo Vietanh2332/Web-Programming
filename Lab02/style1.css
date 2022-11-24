@@ -1,0 +1,25 @@
+.header, .content, .footer {
+    box-sizing: content-box;
+    width: 300px;
+    margin: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    border: gray solid 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content {
+    box-sizing: content-box;
+    height: 135px;
+}
+
+.header, .footer {
+    background-color: rgb(143, 191, 255);
+}
+.new {
+    padding: 2px;
+    border: gray solid 1px;
+    box-sizing: content-box;
+    width: 306px;
+}
