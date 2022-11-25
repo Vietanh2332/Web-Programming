@@ -1,0 +1,30 @@
+.a{
+    font-size: large;
+    padding: 3px;
+    padding-top: 15px;
+}
+
+.new{
+    width: 100%;
+    border-collapse:collapse ;
+}
+
+.one{
+    width: 30%;
+    background-color: rgb(160, 160, 160);
+    padding: 10px;
+}
+
+.tow{
+    background-color: rgb(218, 218, 218);
+    padding: 10px;
+}
+
+.three{
+    background-color: rgb(192, 192, 192);
+    padding: 10px;
+}
+
+.four{
+    vertical-align: top;
+}

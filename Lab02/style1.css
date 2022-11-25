@@ -5,13 +5,14 @@
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 2px;
-    border: gray solid 1px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid;
+    font-family: Tahoma, sans-serif;
 }
 
 .content {
     box-sizing: content-box;
     height: 135px;
+    text-align: top;
 }
 
 .header, .footer {
@@ -19,7 +20,7 @@
 }
 .new {
     padding: 2px;
-    border: gray solid 1px;
+    border: 1px solid;
     box-sizing: content-box;
     width: 306px;
 }
