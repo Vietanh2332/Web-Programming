@@ -1,0 +1,12 @@
+.one, .tow{
+    font-family: Tahoma, sans-serif;
+}
+
+.tow{
+    color: aqua;
+    text-decoration: underline;
+}
+
+.three{
+    list-style-image: url('image1.png');
+}
