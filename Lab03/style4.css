@@ -1,0 +1,71 @@
+.navbar {
+    overflow: hidden;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.navbar .art .spotify{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar img{
+    width: 140px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.navbar a {
+    float: right;
+    font-size: smaller;
+    color: black;
+    margin-top: 15px;
+    margin-left: 14px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.art{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.art img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+}
+
+.spotify{
+    text-align: center;
+    font-size: large;
+    text-decoration:2px underline rgb(47, 255, 57);
+}
+
+.container{
+    width: 99%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.one{
+    width: 33%;
+}
+
+.tow{
+    color: rgb(47, 255, 57);
+}
+
+.img{
+    width: 50px;
+    height: auto;
+}
