@@ -1,0 +1,157 @@
+.main{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.header img, .logo img{
+    width: 55px;
+    height: 55px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.header, .nav{
+    width: 50%;
+    float: left;
+    background-color: rgb(89, 218, 89);
+    height: 75px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.one, .none{
+    float: right;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+.one a, .nav-footer a, .logo a{
+    color: black;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.nav a:hover, .nav-footer a:hover, .logo a:hover{
+    color: purple;
+}
+
+.hero{
+    position: relative;
+    text-align: center;
+}
+
+.hero img{
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 10px 1.5%;
+    background-color: aquamarine;
+}
+
+.heading{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: rgb(20, 6, 221);
+}
+
+.cont{
+    margin-top: 10px;
+}
+
+.content{
+    float: left;
+    width: 70%;
+    background-color: aquamarine;
+    margin-bottom: 10px;
+}
+
+.content-header h3{
+    font-family: "Linux Libertine","Palatino Linotype","EB Garamond","Times New Roman","Times",serif;
+    font-style: italic;
+    color: rgb(31, 34, 219);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.content-header a{
+    color: rgb(31, 34, 219);
+}
+
+.content-header p, .contents p{
+    color:rgb(0, 0, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.content-footer p{
+    margin: 5px 10px;
+    font-size: medium;
+    font-style: italic;
+    font-family: "Linux Libertine","Palatino Linotype","EB Garamond","Times New Roman","Times",serif;
+}
+.aside{
+    float: right;
+    margin-left: 1%;
+    width: 29%;
+    background-color: aquamarine;
+}
+
+.aside h3{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.aside p{
+    margin-bottom: 5px;
+}
+
+.aside a{
+    margin-left: 10px;
+    padding-bottom: 5px;
+}
+
+.contents a{
+    color: blue;
+}
+
+.content a:hover, .aside a:hover{
+    color: rgb(243, 0, 0);
+    text-decoration: underline;
+}
+
+.footer{
+    float: left;
+    width: 100%;
+    background-color: rgb(89, 218, 89);
+    height: 75px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.logo, .nav-footer{
+    float: left;
+    width: 50%;
+}
+
+.logo img{
+    float: left;
+}
+
+.logo a{
+    float: left;
+    margin-top: 20px;
+    padding-left: 25px;
+}
+
+.logo i{
+    font-size: 15px;
+    margin-top: 30px;
+    color: rgb(241, 98, 122);
+}
