@@ -1,0 +1,19 @@
+.main{
+    width: 70%;
+    margin: 10px auto;
+}
+
+.main img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+.main img:hover{
+    box-shadow: 0 0 2px 1px rgb(0, 140, 186);
+}
+
+.main img:active{
+    box-shadow: 0 0 2px 1px rgb(179, 29, 67);
+}

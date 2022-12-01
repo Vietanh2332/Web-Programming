@@ -1,0 +1,28 @@
+.main{
+    width: 70%;
+    margin: 10px auto;
+}
+
+.main h1{
+    color: #fff;
+    text-shadow: 0px 0px 15px blue;
+    text-align: center;
+    background-color: rgba(115, 255, 0, 0.459);
+    font-size: 50px;
+}
+
+.main h1:hover{
+    text-shadow: 0px 0px 15px red;
+}
+
+.box{
+    width: 500px;
+    height: 200px;
+    background-color: yellow;
+    box-shadow: 10px 10px 5px 5px gray;
+}
+.box p{
+    padding-top: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+}
