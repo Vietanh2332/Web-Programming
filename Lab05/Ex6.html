@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .main{
+            width: 70%;
+            margin: 10px auto;
+            display: block;
+        }
+
+        .but{
+            width: 500px;
+            margin: 10px auto;
+            display: block;
+            padding-left: 200px;
+
+        }
+
+        .but button{
+            text-align: center;
+            margin: 0 10px;
+            border: 1px solid gray;
+            background-color: azure;
+            border-radius: 5px;
+        }
+
+        .main video{
+            margin: 10px auto;
+            display: block;
+            border: 3px solid gray;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="but">
+            <button onclick="Vid()" type="button">Play/Pause</button>
+            <button onclick="Big()" type="button">Big</button>
+            <button onclick="Small()" type="button">Small</button>
+            <button onclick="Normal()" type="button">Normal</button>
+        </div>
+
+        <video id="myVideo" width="700px">
+            <source src="Video/mov_bbb.mp4" type="video/mp4">
+        </video> 
+        
+        <script>
+            var vid = document.getElementById("myVideo");
+
+            function Vid() {
+                if (vid.paused) {
+                    vid.play();
+                }
+                else{
+                    vid.pause();
+                }
+            }
+
+            function Big(){
+                vid.width=900
+            }
+
+            function Normal(){
+                vid.width=700
+            }
+
+            function Small(){
+                vid.width=500
+            }
+        </script>
+    </div>
+</body>
+</html>
