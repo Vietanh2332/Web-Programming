@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        #table{
+            border-collapse: collapse;
+            background-color: aliceblue;
+            width: 70%;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        tr, td{
+            border: 2px solid gray;
+        }
+        td{
+            padding:5px 10px;
+        }
+        .one{
+            width: 70%;
+            margin: 0 auto;
+        }
+    </style>
+    <script type="text/javascript">
+        function insert_row() {
+            var x = document.getElementById("table").insertRow(0);
+            var y = x.insertCell(0);
+            var z = x.insertCell(1);
+            y.innerHTML="New Cell1";
+            z.innerHTML="New Cell 2";
+        }
+    </script>
+</head>
+<body>
+    <table id="table">
+        <tr>
+            <td>Row1 Cell1</td>
+            <td>Row1 Cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 Cell1</td>
+            <td>Row2 Cell2</td>
+        </tr>
+    </table>
+    <br>
+    <div class="one"><input type="button" onclick="insert_row()" value="Insert Row"></div>
+</body>
+</html>

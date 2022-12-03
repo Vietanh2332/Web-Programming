@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS DOM Paragraph Style</title>
+    <script type="text/javascript">
+        function changeStyle(){
+            var change = document.getElementById("welcometext");
+            change.style.color = "green";
+            change.style.fontSize = "25px";
+            change.style.fontFamily = "Tahoma, sans-serif"
+        }
+    </script>
+</head>
+<body>
+    <p id="welcometext">Welcome to VTC Academy</p>
+    <div>
+        <button onclick="changeStyle()">Change Style</button>
+    </div>
+</body>
+</html>
