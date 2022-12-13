@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style8.css">
+    <script type="text/javascript">
+        function Show() {
+            var password = document.getElementById("password");
+            if (password.type === "password") {
+                password.type = "text";
+            }
+            else {
+                password.type = "password";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post">
+        <div class="main">
+            <div class="register">
+                <div class="header">
+                    <h2>Đăng nhập bằng email</h2>
+                    <p>Nhập email và mật khẩu tài khoản Tiki</p>
+                </div>
+                <div class="content">
+                    <input type="email" id="email" name="email" placeholder="acb@email.com" required>
+                    <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+                    <a class="a-1" id="show" onclick="Show()">Hiện/Ẩn</a>
+                    <input type="submit" value="Đăng nhập">
+                </div>
+                <div class="footer">
+                    <a href="#">Quên mật khẩu?</a>
+                    <p>Chưa có tài khoản?<a class="a-2" href="#">Tạo tài khoản</a></p>
+                </div>
+            </div>
+            <div class="image"><img src="https://salt.tikicdn.com/ts/upload/eb/f3/a3/25b2ccba8f33a5157f161b6a50f64a60.png" alt="Tiki" width="203">
+                <div class="content_img">
+                    <h4>Mua sắm tại Tiki</h4>
+                    <span>Siêu ưu đãi mỗi ngày</span>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

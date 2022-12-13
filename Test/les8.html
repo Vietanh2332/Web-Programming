@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function changeResize() {
+            console.log("innerWidth",window.innerWidth);
+            console.log("innerHeight",window.innerHeight);
+        }
+        var myWindow;
+
+        function openNewWindow() {
+            myWindow = window.open('', '', 'width=400, height=200');
+        }
+        function closeWindow() {
+            window.close();
+        }
+        function moveTo() {
+            myWindow.moveTo(500,100);
+        }
+        function ReSize() {
+            myWindow.resizeTo(200,700);
+        }
+        function historyBack() {
+            history.back();
+        }
+        function actionRemember() {
+            var remember=document.getElementById('remember');
+            if(remember.checked===true){
+               setCookie("remember",1,10);
+            }else{
+                document.cookie="remember=0";
+            }
+        }
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            let expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        var my_num=5.4;
+        console.log(Math.random());
+        function getRandomFromAToB(min,max) {
+            var r_number= Math.floor(Math.random()*(max-min))+min;
+            console.log("r_number",r_number);
+        }
+        var a_now=new Date(2022,11,4,12,3,2,0);
+        console.log("a_now",a_now);
+        function renderDateNow() {
+            var date_now=document.getElementById('date_now');
+            var a_now=new Date();
+            date_now.innerHTML=a_now.toDateString();
+        }
+        var car=function(id,name,so_khung,bien_so) {
+            this.id=id;
+            this.name=name;
+            this.so_khung=so_khung;
+            this.bien_so=bien_so;
+        }
+        var my_car=car(3,"xe honda","23232","334343");
+        console.log("my_car",my_car);
+    </script>
+    <title>Document</title>
+</head>
+<body onresize="changeResize()">
+    <form>
+        <div>
+            <label>Username <input type="text" name="username"></label>
+            <label>Password <input type="password" name="password"></label>
+            <label>Remember me <input type="checkbox" id="remember" onchange="actionRemember()" value="1" name="remember"></label>
+        </div>
+    </form>
+    <div id="date_now"></div>
+    <ul>
+        <li><button onclick="openNewWindow()">openNewWindow</button></li>
+        <li><button onclick="closeWindow()">closeWindow</button></li>
+        <li><button onclick="moveTo()">moveTo</button></li>
+        <li><button onclick="ReSize()">ReSize</button></li>
+        <li><button onclick="historyBack()">historyBack</button></li>
+        <li><button onclick="historyBack()">historyBack</button></li>
+        <li><button onclick="getRandomFromAToB(0,500)">getRandomFromAToB</button></li>
+        <li><button onclick="renderDateNow()">renderDateNow</button></li>
+    </ul>
+</body>
+</html>

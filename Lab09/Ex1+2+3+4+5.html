@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .main {
+            width: 70%;
+            margin: 30px auto;
+        }
+        #hex, #teststr, #validEmail, #inputString{
+            width: 50%;
+            height: 35px;
+            margin-bottom: 15px;
+        } 
+        input[type="submit"] {
+            width: 70px;
+            height: 35px;
+            background-color: greenyellow;
+        }
+    </style>
+    <script type="text/javascript">
+        function Submit1() {
+            var hex = document.getElementById("hex").value;
+            regexp = /^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
+            if (regexp.test(hex) == true) {
+                alert("The value for is hexcolor");
+            }
+            else{
+                alert("Value for is not hexcolor");
+            }
+        }
+        function Submit2() {
+            var str = document.getElementById("teststr").value;
+            regexp = /^([A-Z]{1})/;
+            if (regexp.test(str)) {
+                alert("The first character of the string is uppercase");
+            }
+            else {
+                alert("The first character of the string is not uppercase");
+            }
+        }
+        function Submit3() {
+            var email = document.getElementById("validEmail").value;
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (mailformat.test(email)) {
+                alert("Valid email address!");
+            }
+            else{
+                alert("You have entered an invalid email address!");
+            }
+        }
+        function Submit4() {
+            str = document.getElementById("inputString").value;
+            str = str.replace(/(^\s*)|(\s*$)/ig, "");
+            str = str.replace(/[ ]{2,}/ig, " ");
+            str = str.replace(/\n /, "\n");
+            alert(str + "\nNoofwoods: " + str.split(' ').length);
+        }
+        function highlight() {
+            var Items = document.getElementsByTagName("strong");
+            for (let i = 0; i < Items.length; i++) {
+                if (i == 0) {
+                    Items[i].style.color = "red";
+                }else{
+                    Items[i].style.color = "blue";
+                }
+            }
+        }
+        function normal() {
+            var Items = document.getElementsByTagName("strong");
+            for (let i = 0; i < Items.length; i++) {
+                Items[i].style.color = "black";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="hexcolor">
+            <h2>Hexcolor</h2>
+            <input type="text" id="hex" placeholder="Input hexcolor">
+            <input type="submit" value="Submit" onclick="Submit1()">
+        </div>
+        <div class="stringtest">
+            <h2>String Test</h2>
+            <input type="text" id="teststr" placeholder="Input string">
+            <input type="submit" value="Submit" onclick="Submit2()">
+        </div>
+        <div class="validEmail">
+            <h2>Validation Email</h2>
+            <input type="text" id="validEmail" placeholder="Input email">
+            <input type="submit" value="Submit" onclick="Submit3()">
+        </div>
+        <div class="inputString">
+            <h2>String</h2>
+            <input type="text" id="inputString" placeholder="Input String">
+            <input type="submit" value="Submit" onclick="Submit4()">
+        </div>
+        <div class="highlight">
+            <p><a href="#" onmouseover="highlight()" onmouseout="normal()">Highlight the bold words of the paragraph</a></p>
+            <p><strong>Tắt đèn</strong> là một trong những <strong>tác phẩm văn học</strong> tiêu biểu nhất của nhà văn <strong>Ngô Tất Tố</strong> (<strong>tiểu thuyết</strong>, in trên 
+                <br>báo Việt nữ năm <strong>1937</strong>).[1] Đây là một <strong>tác phẩm văn học</strong> hiện thực phê phán với nội dung nói về cuộc sống
+                <br>khốn khổ của tầng lớp <strong>nông dân</strong> Việt Nam đầu <strong>thế kỉ XX</strong> dưới ách đô hộ của <strong>thực dân Pháp</strong>.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .main {
+            width: 70%;
+            margin: 30px auto;
+        }
+        #str{
+            width: 50%;
+            height: 35px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        input[type="submit"]{
+            width: 70px;
+            height: 35px;
+            background-color: greenyellow;
+        }
+    </style>
+    <script type="text/javascript">
+        function Submit() {
+            var str = document.getElementById("str").value;
+            var ar = str.split(',');
+            console.log("Sample Data: ", ar);
+            ar.sort((a, b) => a - b);
+            console.log("Expected Output: ", ar);
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <input type="text" id="str" placeholder="Enter numbers separated by commas ' , ' " required>
+        <input type="submit" value="Submit" onclick="Submit()">
+    </div>
+</body>
+</html>

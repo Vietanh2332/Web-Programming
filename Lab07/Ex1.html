@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        #text{
+            width: 200px;
+            margin: 5px auto;
+            margin-top: 100px;
+            text-align: left;
+        }
+        #number{
+            width: 200px;
+            height: 40px;
+            margin: 0 auto;
+            border: 1px solid gray;
+            background-color: aliceblue;
+        }
+    </style>
+    <script type="text/javascript">
+        function one() {
+            var fahrenheit = prompt('Input Fahrenheit');
+            var celsius = (fahrenheit - 32)/1.8;
+            document.write(celsius);
+        }
+    </script>
+</head>
+<body>
+    <p id="text">Input Fahrenheit</p>
+    <p id="number" onclick="one()"></p> 
+</body>
+</html>

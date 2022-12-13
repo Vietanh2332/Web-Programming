@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function insertToIdDemo() {
+            var demo=document.getElementById('demo');
+            demo.innerHTML="hello javascript";
+        }
+        function insertInToTagName() {
+            var tag_p=document.getElementsByTagName('p');
+            tag_p[1].innerHTML="hello javascript";
+        }
+        function insertInToTagByClass() {
+            var tagclass=document.getElementsByClassName('my-p');
+            tagclass[1].innerHTML="hello javascript";
+        }
+        function changeContentInTagDiv() {
+            var my_div_2=document.getElementById('my-div2');
+            my_div_2.textContent="<h1>hello javascript</h1>";
+        }
+        function changeAttributeToIDTag() {
+            var my_tag_p3=document.getElementById('my-p3');
+            my_tag_p3.className="my-class-3";
+
+
+        }
+        function changeAttributeRoom() {
+            var my_tag_p4=document.getElementById('my-p4');
+            my_tag_p4.setAttribute('room',"11");
+        }
+        function changeStyleBgTagP() {
+            var tag_p5=document.getElementById('my-p5');
+            tag_p5.style.backgroundColor="red";
+            tag_p5.style.backgroundColor="red";
+        }
+        function actionCreateTagDiv() {
+            var new_div=document.createElement('div');
+            new_div.innerHTML="hello javascript";
+            var my_div_5=document.getElementById('my-div-5');
+            my_div_5.appendChild(new_div);
+
+        }
+        function removeTagPInTag6() {
+            var my_div_6=document.getElementById('my-div-6');
+            var my_p_6=document.getElementById('my-p-6');
+            my_div_6.removeChild(my_p_6);
+
+        }
+        function replTagDiv7() {
+            var my_div_7=document.getElementById('my-div-7');
+            var new_div=document.createElement('div');
+            new_div.innerHTML="hello javascript";
+            new_div.setAttribute('id','my-p-javascript-7');
+            var my_p_node_js_7=document.getElementById('my-p-node-js-7');
+            my_div_7.replaceChild(new_div,my_p_node_js_7);
+
+        }
+        function DoWrite() {
+            document.write("hello javascript");
+
+        }
+        function detectOnChange() {
+            alert("Ban da thay doi noi dung");
+
+        }
+        function detectonmouseout() {
+            console.log("ban dan di chuot");
+
+        }
+        function addEventToMyDiv() {
+            var my_div_8=document.getElementById('my-div-8');
+            my_div_8.addEventListener('mousemove',function () {
+                console.log("dung la ban dang di chuot");
+            })
+
+        }
+        function removeEventToMyDiv() {
+            var my_div_8=document.getElementById('my-div-8');
+            my_div_8.removeEventListener('mousemove',function () {
+                console.log("demo remove");
+            },true);
+
+        }
+        function check_input2() {
+            var username=document.getElementById('username').value;
+            if(username[0]!=="a"){
+                alert("username phai bat dau ban ky tu");
+                return false;
+            }
+            var password=document.getElementById('password').value;
+            if(password.length<5){
+                alert("password phai lon hon 5 ky tu");
+                return false;
+            }
+            return true;
+        }
+        function check_username() {
+            var username=document.getElementById('username');
+            if(!username.checkValidity()){
+                alert(username.validationMessage);
+            }
+        }
+        function check_age() {
+            var age=document.getElementById('age');
+            if(!age.checkValidity()){
+                alert(age.validationMessage);
+            }
+        }
+    </script>
+    <style type="text/css">
+        input:valid{
+            background-color: #4cff5c;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo">
+
+    </div>
+    <p>
+
+    </p>
+    <p>
+
+    </p>
+    <p class="my-p">
+
+    </p>
+    <p class="my-p">
+
+    </p>
+    <div id="my-div2"></div>
+    <p id="my-p3" class="my-class-1"></p>
+    <p id="my-p4" room="10"></p>
+    <p id="my-p5">
+        hello javascript
+    </p>
+    <div id="my-div-5">
+
+    </div>
+    <div id="my-div-6">
+        <p id="my-p-6">hello javascript</p>
+    </div>
+    <div id="my-div-7">
+        <p id="my-p-node-js-7">hello nodejs</p>
+        <!--<p id="my-p-javascript-7">hello javascript</p>-->
+    </div>
+    <form action="/FE1/bai7.7.html" method="post" onsubmit="return check_input2()">
+        <div>
+            <label>Username</label>
+            <input type="text" id="username" name="username" required >
+            <button type="button" onclick="check_username()">check_username</button>
+        </div>
+        <div>
+            <label>Username</label>
+            <input type="number" id="age" name="age" min="10" max="100" required >
+            <button type="button" onclick="check_age()">check_age</button>
+        </div>
+
+        <div>
+            <label>Password</label>
+            <input id="password" type="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+
+    <div style="width: 200px;height: 200px;background-color: #da7451; " onmousemove="detectonmouseout()">
+
+    </div>
+    <div id="my-div-8" style="width: 200px;height: 200px;background-color: #da7451;margin-top: 40px">
+
+    </div>
+    <ul>
+        <li><button onclick="insertToIdDemo()">insertToIdDemo</button></li>
+        <li><button onclick="insertInToTagName()">insertInToTagName</button></li>
+        <li><button onclick="insertInToTagByClass()">insertInToTagByClass</button></li>
+        <li><button onclick="changeContentInTagDiv()">changeContentInTagDiv</button></li>
+        <li><button onclick="changeAttributeToIDTag()">changeAttributeToIDTag</button></li>
+        <li><button onclick="changeAttributeRoom()">changeAttributeRoom</button></li>
+        <li><button onclick="changeStyleBgTagP()">changeStyleBgTagP</button></li>
+        <li><button onclick="actionCreateTagDiv()">actionCreateTagDiv</button></li>
+        <li><button onclick="removeTagPInTag6()">removeTagPInTag6</button></li>
+        <li><button onclick="replTagDiv7()">replTagDiv7</button></li>
+        <li><button onclick="DoWrite()">DoWrite</button></li>
+        <li><button onclick="addEventToMyDiv()">addEventToMyDiv</button></li>
+        <li><button onclick="removeEventToMyDiv()">removeEventToMyDiv</button></li>
+
+    </ul>
+</body>
+</html>

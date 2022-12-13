@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style7.css">
+
+    <script type="text/javascript">
+        var i = 1;
+            function Submit() {
+                var empID = document.getElementById("empID").value;
+                var Fname = document.getElementById("Fname").value;
+                var Lname = document.getElementById("Lname").value;
+                var Snumber = document.getElementById("Snumber").value;
+                var Salary = document.getElementById("Salary").value;
+                if (empID.length > 0 & Fname.length > 0 & Lname.length > 0 & Snumber.length > 0 & Salary.length > 0) {
+                    if (i == i) {
+                        var x = document.getElementById("sampleTable").insertRow(i);
+                        var x1 = x.insertCell(0);
+                        var x2 = x.insertCell(1);
+                        var x3 = x.insertCell(2);
+                        var x4 = x.insertCell(3);
+                        x1.innerHTML = empID;
+                        x2.innerHTML = Fname + Lname;
+                        x3.innerHTML = Snumber;
+                        x4.innerHTML = Salary;
+                        i++;
+                    }
+                }
+                else{
+                    alert("Input employeeID, First Name, Last Name, Security Number and Salary");
+                }
+            }
+            function Reset(){
+                location.reload();
+            }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="add_employee" id="add">
+            <h2>Add Employee</h2>
+            <label class="col-35">Employee ID:</label>
+            <input class="col-60" id="empID" type="text" placeholder="Employee ID" name="employeeId">
+            <label class="col-35">Fisrt Name</label>
+            <input class="col-60" id="Fname" type="text" placeholder="First Name" name="Fname">
+            <label class="col-35">Last Name</label>
+            <input class="col-60" id="Lname" type="text" placeholder="Last Name" name="Lname">
+            <label class="col-35">Security Number</label>
+            <input class="col-60" id="Snumber" type="text" placeholder="Security Number" name="Snumber">
+            <label class="col-35">Salary</label>
+            <input class="col-60" id="Salary" type="text" placeholder="Salary" name="Salary">
+            <input type="submit" value="Submit" name="Submit" onclick="Submit()">
+            <input type="reset" value="Reset" name="Reset" onclick="Reset()">
+        </div>
+        <div class="table">
+            <h2>Employee Management System</h2>
+            <table id="sampleTable">
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Security Number</th>
+                    <th>Salary</th>
+                </tr>
+                <tr>
+                    <td id="employeeID"></td>
+                    <td id="employeeName"></td>
+                    <td id="securityNumber"></td>
+                    <td id="saLary"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

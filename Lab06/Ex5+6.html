@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style5+6.css">
+    <script type="text/javascript">
+        function Validate(){
+            let x = document.forms["myForm"]["fullname"].value;
+            console.log(x);
+            var phone = document.getElementById("phone").value;
+            if (phone[0] !== "0") {
+                alert("Re-enter phone number");
+                return false;
+            }else if (phone.length != 10) {
+                alert("Re-enter phone number");
+                return false;
+            }else{
+                var fname = document.getElementById("fname").value;
+                var email = document.getElementById("email").value;
+                var phone = document.getElementById("phone").value;
+                document.writeln("Full Name: ", fname);
+                document.writeln("Email: ", email);
+                document.writeln("Phone: ", phone);                
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" method="post" onsubmit="return Validate()" action="#">
+        <div class="main">
+            <h2>Customer Form</h2>
+            <div class="content">
+                <div class="row">
+                    <label class="col-25" for="fname">Full Name</label>
+                    <input class="col-75" type="text" id="fname" name="fullname" placeholder="Your full name..." required>
+                </div>
+                <div class="row">
+                    <label class="col-25" for="email">Email</label>
+                    <input class="col-75" type="email" id="email" name="email" placeholder="Your email..." required>
+                </div>
+                <div class="row">
+                    <label class="col-25" for="phone">Phone</label>
+                    <input class="col-75" type="text" id="phone" name="phone" placeholder="Your phone..." required>
+                </div>
+                <div class="row">
+                    <label class="col-25" for="gender">Gender</label>
+                    <div class="col-75-no-border">
+                        <div class="check">
+                            <input type="radio" id="m-option" class="circle-1" name="selector" checked>
+                            <label for="m-option">Male</label>
+                        </div>
+                        <div class="check">
+                            <input type="radio" id="f-option" class="circle-1" name="selector" checked>
+                            <label for="f-option">Female</label>
+                        </div>
+                        <div class="check">
+                            <input type="radio" id="o-option" class="circle-1" name="selector" checked>
+                            <label for="o-option">Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-25" for="country">Country</label>
+                    <div>
+                        <select id="country" name="country">
+                            <option value="brunei">Brunei</option>
+                            <option value="campuchia">Campuchia</option>
+                            <option value="indonesia">Indonesia</option>
+                            <option value="lao">Lào</option>
+                            <option value="malaysia">Malaysia</option>
+                            <option value="myanmar">Myanmar</option>
+                            <option value="philippines">Philippines</option>
+                            <option value="singapore">Singapore</option>
+                            <option value="thai-lan">Thái Lan</option>
+                            <option value="dong-timor">Đông Timor</option>
+                            <option selected="selacted" value="vietnam">Việt Nam</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-25" for="comment">Comment</label>
+                    <textarea class="col-75" name="messenge" style="height:200px" placeholder="Write something..."></textarea>
+                </div>
+                <div class="footer">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

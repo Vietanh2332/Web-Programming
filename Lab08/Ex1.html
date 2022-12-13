@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .main{
+            width: 70%;
+            margin: 10px auto;
+        }
+        input[type="text"]{
+            width: 50%;
+            height: 40px;
+        }
+        input[type="submit"]{
+            height: 40px;
+        }
+    </style>
+    <script type="text/javascript">
+        function Submit() {
+            var check = document.getElementById("check").value;
+            var leng = check.length;
+            var a = 0;
+            n = Math.round(leng/2);
+            for (let i = 0; i < n; i++) {
+                if (check[i] === check[leng-1]) {
+                    a++;
+                }
+                leng--;
+            }
+            if (a == n) {
+                alert("Yes");
+            }
+            else{
+                alert("No");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <h2>Enter Text</h2>
+        <input type="text" name="text" id="check" required>
+        <input type="submit" value="Submit" onclick="Submit()">
+    </div>
+</body>
+</html>

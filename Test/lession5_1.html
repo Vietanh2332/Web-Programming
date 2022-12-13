@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+       function changeImage() {
+            var my_image=document.getElementById("my_image");
+            if(my_image.src.indexOf("i.pinimg.com")!==-1){
+                my_image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6EEDNiQP07zoSdwO8d_c0Hi379m3U5Kuv4g&usqp=CAU";
+            }
+       }
+       function changeImage2(index) {
+           var my_image=document.getElementById('my_image');
+            switch (index) {
+                case 1:
+                    my_image.src="https://media.istockphoto.com/id/638730224/vector/heart-pattern.jpg?s=612x612&w=0&k=20&c=px-vGXGmt3dSSa854-GroCNhPByaaWr5w_kJWrjd7Es=";
+                    break;
+                case 2:
+                    my_image.src="https://thumbs.dreamstime.com/b/beautiful-old-wall-nice-background-space-text-beautiful-old-wall-nice-background-space-text-stone-wall-134196815.jpg";
+                    break;
+                case 3:
+                    my_image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBeUt83IbXWRMDuIWCoMbWkp_lLZLsVfVwSg&usqp=CAU";
+                    break;
+                default:
+                    my_image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYSHgyqA0iMtJ6MrZeatIlJNXWtUdR7M5qaQ&usqp=CAU";
+                    break;
+            }
+       }
+        for (var i=1;i<=10;i++){
+            console.log("i:",i);
+        }
+        var person={
+            "name":"Trung",
+            "age":10,
+            "address":"hà noi"
+        }
+        for (var key in person){
+            console.log("key:",key);
+
+            console.log("key:",person[key]);
+        }
+        var i=0;
+        while (i<10){
+            console.log("while i:",i);
+            i++;
+        }
+        var my_array=["Trung","Hoang","lan","hong"];
+        console.log("index2",my_array[2]);
+        console.log("array leng",my_array.length);
+        console.log("my_array",my_array);
+        my_array.sort();
+        console.log("my_array",my_array);
+       my_array.push("Lam");
+       console.log("my_array",my_array);
+
+       var tong=tinh_tong(10,6);
+       function tinh_tong(a,b) {
+            return a+b;
+       }
+        function insertTitle(title1) {
+            var title=document.getElementById('title');
+            title.innerHTML=title1;
+        }
+        function write_doc(title) {
+            document.write(title);
+        }
+        function show_alert(content) {
+            alert(content);
+        }
+    </script>
+</head>
+<body>
+    <div class="image">
+        <img id="my_image" style="width: 300px" onclick="changeImage()" src="https://i.pinimg.com/736x/55/74/54/557454f9d762c6b6c9efdaec66b4dbb9.jpg">
+        <br/>
+        <div id="title"></div>
+    </div>
+    <button onclick="changeImage2(1)">Anh 1</button>
+    <button onclick="changeImage2(2)">Anh 2</button>
+    <button onclick="changeImage2(3)">Anh 3</button>
+    <button onclick="changeImage2(4)">Anh 4</button>
+    <button onclick="insertTitle('day anh mau !')">Insert Title</button>
+    <button onclick="write_doc('xin chào cả lop')">document write</button>
+    <button onclick="show_alert('day la alert')">Show alert</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+#main{
+    width: 70%;
+    margin: 65px auto;
+    height: 500px;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+h2, #one{
+    margin-left: 15px;
+}
+.squares{
+    width: 440px;
+}
+#yellow, #green, #gray{
+    width: 130px;
+    height: 130px;
+    margin: 10px 5px;
+    border: 2px solid black;
+    float: left;
+}
+#yellow{
+    background-color: yellow;
+}
+#green{
+    background-color: green;
+}
+#gray{
+    background-color: gray;
+}

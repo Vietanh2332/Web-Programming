@@ -1,0 +1,48 @@
+form {
+    display: block;
+    width: 70%;
+    margin: 50px auto;
+    height: 250px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding-top: 50px;
+}
+
+.main {
+    width: 40%;
+}
+
+.main h1 {
+    margin-left: 20px;
+}
+
+.one {
+    margin-left: 20px;
+    width: 100%;
+    float: left;
+}
+
+input[type="number"] {
+    width: 50px;
+    border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type="submit"] {
+    width: 70px;
+    height: 25px;
+    margin-top: 15px;
+    background-color: greenyellow;
+    border-radius: 5px;
+    float: right;
+}
+
+input[type="submit"]:hover {
+    border-color: gold;
+}

@@ -1,0 +1,75 @@
+.main{
+    width: 80%;
+    margin: 10px auto;
+}
+
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: aquamarine;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border: 1px solid gray;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+    border-radius: 5px;
+}
+
+td, th{
+    text-align: left;
+    padding: 8px;
+    height: 32px;
+    border-radius: 5px;
+}
+
+tr:nth-child(even), tr:nth-child(odd){
+    background-color: #919191;
+}
+
+.add_employee {
+    width: 60%;
+    background-color: aquamarine;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.add_employee .col-35 {
+    width: 35%;
+    margin-top: 14px;
+    margin-left: 5px;
+    float: left;
+}
+
+.add_employee .col-60 {
+    width: 60%;
+    float: left;
+    margin-top: 6px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 130px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+input[type="submit"]{
+    background-color: greenyellow;
+}
+
+input[type="reset"]{
+    background-color: red;
+}
