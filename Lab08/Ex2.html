@@ -16,9 +16,11 @@
             window.open("https://www.google.com.vn/?hl=vi", "", "width=500; height=250",);
         }
         function getSize() {
+            var wm = document.getElementsByClassName("main");
+            var wmn = wm[0].clientWidth;
             var w = document.documentElement.clientWidth;
             var h = document.documentElement.clientHeight;
-            document.getElementById("wh").innerHTML = "<p>Width: " + w + "    Height: " + h + "<p>";
+            document.getElementById("wh").innerHTML = wmn + "<p> Width: " + w + "    Height: " + h + "<p>";
         }
     </script>
     <style type="text/css">
