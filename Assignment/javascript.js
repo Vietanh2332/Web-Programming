@@ -60,3 +60,51 @@ function loadHeight() {
     var widN = wid[0].clientWidth;
     wid[0].style.height = widN * 0.35 + 'px';
 }
+function Tab1() {
+    var tab_1 = document.getElementById("tab-1");
+    var tab_2 = document.getElementById("tab-2");
+    var tab_3 = document.getElementById("tab-3");
+    tab_1.classList.add('tab-products');
+    tab_2.classList.remove('tab-products');
+    tab_3.classList.remove('tab-products');
+    var tabd_1 = document.getElementById("tabd-1");
+    var tabd_2 = document.getElementById("tabd-2");
+    var tabd_3 = document.getElementById("tabd-3");
+    tabd_2.classList.remove("display-block");
+    tabd_3.classList.remove("display-block");
+    tabd_1.classList.add("display-block");
+    tabd_2.classList.add("display-none");
+    tabd_3.classList.add("display-none");
+}
+function Tab2() {
+    var tab_1 = document.getElementById("tab-1");
+    var tab_2 = document.getElementById("tab-2");
+    var tab_3 = document.getElementById("tab-3");
+    tab_2.classList.add('tab-products');
+    tab_1.classList.remove('tab-products');
+    tab_3.classList.remove('tab-products');
+    var tabd_1 = document.getElementById("tabd-1");
+    var tabd_2 = document.getElementById("tabd-2");
+    var tabd_3 = document.getElementById("tabd-3");
+    tabd_1.classList.remove("display-block");
+    tabd_3.classList.remove("display-block");
+    tabd_2.classList.add("display-block");
+    tabd_1.classList.add("display-none");
+    tabd_3.classList.add("display-none");
+}
+function Tab3() {
+    var tab_1 = document.getElementById("tab-1");
+    var tab_2 = document.getElementById("tab-2");
+    var tab_3 = document.getElementById("tab-3");
+    tab_3.classList.add('tab-products');
+    tab_2.classList.remove('tab-products');
+    tab_1.classList.remove('tab-products');
+    var tabd_1 = document.getElementById("tabd-1");
+    var tabd_2 = document.getElementById("tabd-2");
+    var tabd_3 = document.getElementById("tabd-3");
+    tabd_2.classList.remove("display-block");
+    tabd_1.classList.remove("display-block");
+    tabd_3.classList.add("display-block");
+    tabd_2.classList.add("display-none");
+    tabd_1.classList.add("display-none");
+}
